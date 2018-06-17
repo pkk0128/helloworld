@@ -61,13 +61,13 @@ class Inchoo_HelloDeveloper_Block_Adminhtml_Aadmin_Edit_Tab_Form extends Mage_Ad
             'name' => 'address',));
 
 
-        $fieldset->addField('content', 'editor', array(
+        $fieldset->addField('discription', 'editor', array(
 
-            'name' => 'content',
+            'name' => 'discription',
 
-            'label' => Mage::helper('Inchoo_HelloDeveloper')->__('Content'),
+            'label' => Mage::helper('Inchoo_HelloDeveloper')->__('Discription'),
 
-            'title' => Mage::helper('Inchoo_HelloDeveloper')->__('Content'),
+            'title' => Mage::helper('Inchoo_HelloDeveloper')->__('discription'),
 
             //'style' => 'width:700px; height:500px;',
 

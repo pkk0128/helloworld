@@ -42,6 +42,9 @@
                     <aadmin>
                         <table>aadmintable</table>
                     </aadmin>
+                    <aamodel>
+                        <table>aamodel</table>
+                    </aamodel>
                 </entities>
             </student_resource>
         </models>

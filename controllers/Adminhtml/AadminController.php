@@ -15,15 +15,61 @@ class Inchoo_HelloDeveloper_Adminhtml_AadminController extends Mage_Adminhtml_Co
     }
     public function aamodelAction()
     {
+
+       /* $new_product    = Mage::getModel('catalog/product');
+
+        $new_product->setWebsiteIds(array(1));
+        $new_product->setSku('lu-rtest');
+        $new_product->setPrice(1235);
+        $new_product->setCategoryIds(array(1));
+        $new_product->setAttributeSetId(4);
+        $new_product->setVisibility(1);
+        $new_product->setType('Simple Product');
+        $new_product->setName('Name');
+        $new_product->setDescription('');
+        $new_product->setShortDescription('');
+        $new_product->setStatus(2);
+        $new_product->setTaxClassId(2);
+        $new_product->setWeight(0);
+        $new_product->setCreatedAt(strtotime('now'));
+        $new_product->save();
+        die;*//* $new_product    = Mage::getModel('catalog/product');
+
+        $new_product->setWebsiteIds(array(1));
+        $new_product->setSku('lu-rtest');
+        $new_product->setPrice(1235);
+        $new_product->setCategoryIds(array(1));
+        $new_product->setAttributeSetId(4);
+        $new_product->setVisibility(1);
+        $new_product->setType('Simple Product');
+        $new_product->setName('Name');
+        $new_product->setDescription('');
+        $new_product->setShortDescription('');
+        $new_product->setStatus(2);
+        $new_product->setTaxClassId(2);
+        $new_product->setWeight(0);
+        $new_product->setCreatedAt(strtotime('now'));
+        $new_product->save();
+        die;*/
+
+
         //die('check');
-        $collectioion = Mage::getModel('student/student1')->getCollection();
-        print_r($collectioion->getData());
-        die;
+        $collectioion = Mage::getModel('catalog/product')->getCollection();
+        //print_r($collectioion->getData());
+        //die('dying in aamodle controller');
+        $this->loadLayout();
+        $this->renderLayout();
     }
     public function gridfAction()
     {
         $this->loadLayout();
         $this->getResponse()->setBody($this->getLayout()->createBlock('test/adminhtml_Aadmin_grid')->toHtml());
+    }
+
+    public function gridpAction()
+    {
+        $this->loadLayout();
+        $this->getResponse()->setBody($this->getLayout()->createBlock('test/adminhtml_Aamodel_grid')->toHtml());
     }
     public function newAction()
     {
