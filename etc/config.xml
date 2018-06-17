@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+ 
+<config>
+    <modules>
+        <Inchoo_HelloDeveloper>
+            <version>0.6.0</version>
+        </Inchoo_HelloDeveloper>
+    </modules>
+    <global>
+    	<helpers>
+			  <Inchoo_HelloDeveloper>
+			      <class>Inchoo_HelloDeveloper_Helper</class>
+			  </Inchoo_HelloDeveloper>
+		</helpers>
+        
+        <blocks>
+            <test>
+                <class>Inchoo_HelloDeveloper_Block</class>
+            </test>
+        </blocks>
+
+        <models>
+            <student>
+                <class>Inchoo_HelloDeveloper_Model</class>
+                <resourceModel>student_resource</resourceModel>
+            </student>
+            <student_resource>
+                <class>Inchoo_HelloDeveloper_Model_Resource</class>
+                <entities><!-- entity should not contain _ !~ etc -->
+                    <student>
+                        <table>student</table>
+                    </student>
+                    <student1>
+                        <table>student1</table>
+                    </student1>
+                    <student2>
+                        <table>student2</table>
+                    </student2>
+                    <tablename>
+                        <table>table_name</table>
+                    </tablename>
+                    <aadmin>
+                        <table>aadmintable</table>
+                    </aadmin>
+                </entities>
+            </student_resource>
+        </models>
+
+     <resources>
+        <mysetup>
+            <setup>
+                <module>Inchoo_HelloDeveloper</module>
+            </setup>
+        </mysetup>
+         <connection>
+                <use>core_setup</use>
+         </connection>
+        <Inchoo_HelloDeveloper_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </Inchoo_HelloDeveloper_write>
+        <Inchoo_HelloDeveloper_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </Inchoo_HelloDeveloper_read>
+    </resources>
+
+    </global>    
+    <frontend>
+        <routers>
+            <Inchoo_HelloDeveloper_SomeFreeRouterName1>
+                <use>standard</use>
+                <args>
+                    <module>Inchoo_HelloDeveloper</module>
+                    <frontName>dev1</frontName>
+                </args>
+            </Inchoo_HelloDeveloper_SomeFreeRouterName1>
+        </routers>
+    </frontend>    
+     <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Inchoo_HelloDeveloper before="Mage_Adminhtml">Inchoo_HelloDeveloper_Adminhtml</Inchoo_HelloDeveloper>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+     <adminhtml>
+        <menu>
+            <Inchoo_HelloDeveloper module="Inchoo_HelloDeveloper">
+                <title>My Menu</title>
+                <sort_order>1000</sort_order>
+                <children>
+                    <Inchoo_HelloDeveloper1 module="Inchoo_HelloDeveloper">
+                        <title>test1</title>
+                        <sort_order>0</sort_order>
+                        <action>adminhtml/index/raj</action>
+                    </Inchoo_HelloDeveloper1>
+                     
+                     <Inchoo_HelloDeveloper2 module="Inchoo_HelloDeveloper">
+                        <title>test2</title>
+                        <sort_order>1</sort_order>
+                        <action>adminhtml/order/index</action>
+                    </Inchoo_HelloDeveloper2>
+
+                    <RajDeveloper module="Inchoo_HelloDeveloper">
+                        <title>Raj_Menu</title>
+                        <sort_order>2</sort_order>
+                        <action>adminhtml/Raj/Raj</action>
+                    </RajDeveloper>
+
+                    <RajDeveloper1 module="Inchoo_HelloDeveloper">
+                        <title>Pankaj_Menu</title>
+                        <sort_order>3</sort_order>
+                        <action>adminhtml/Raj/Pankaj_2</action>
+                    </RajDeveloper1>
+                    
+                    <RajDeveloper2 module="Inchoo_HelloDeveloper">
+                        <title>Pankaj_3</title>
+                        <sort_order>5</sort_order>
+                        <action>adminhtml/Raj/Pankaj_3</action>
+                    </RajDeveloper2>
+                    <RajDeveloper3 module="Inchoo_HelloDeveloper">
+                        <title>Pankaj_3a</title>
+                        <sort_order>5</sort_order>
+                        <action>adminhtml/Pankajg/Pankaj_3a</action>
+                    </RajDeveloper3>
+                    <Pankajram module="Inchoo_HelloDeveloper">
+                        <title>Pankajram</title>
+                        <sort_order>6</sort_order>
+                        <action>adminhtml/Ram/Pankajram</action>
+                    </Pankajram>
+                    <Ctestfunction>
+                        <title>Ctestfunction</title>
+                        <sort_order>7</sort_order>
+                        <action>adminhtml/Ctest/Ctest1</action>
+                    </Ctestfunction>
+                    <gridchecking module="Inchoo_HelloDeveloper">
+                        <title>Gridchecking</title>
+                        <sort_order>50</sort_order>
+                        <action>adminhtml/index/grid</action>
+                    </gridchecking>
+                    <gridtable module="Inchoo_HelloDeveloper">
+                        <title>gridtable</title>
+                        <sort_order>51</sort_order>
+                        <action>adminhtml/Gridg/gridtable</action>
+                    </gridtable>
+                    <student3 module="Inchoo_HelloDeveloper">
+                        <title>Student3</title>
+                        <sort_order>52</sort_order>
+                        <action>adminhtml/Gridg/Grid3</action>
+                    </student3>
+                    <forForm module="Inchoo_HelloDeveloper">
+                        <title>forForm</title>
+                        <sort_order>53</sort_order>
+                        <action>adminhtml/Gridg/new</action>
+                    </forForm>
+                    <forFormedit module="Inchoo_HelloDeveloper">
+                        <title>forFormedit</title>
+                        <sort_order>54</sort_order>
+                        <action>adminhtml/Gridg/edit</action>
+                    </forFormedit>
+                    <forSave>
+                        <title>forSave</title>
+                        <sort_order>55</sort_order>
+                        <action>adminhtml/Gridg/save</action>
+                    </forSave>
+                    <!--<Aamenu module="Inchoo_HelloDeveloper">-->
+                        <!--<title>Aa</title>-->
+                        <!--<sort_order>56</sort_order>-->
+                        <!--<action>dev1/aa/Aa</action>-->
+                    <!--</Aamenu>-->
+                    <Aadmin module="Inchoo_HelloDeveloper">
+                        <title>Aadmin</title>
+                        <sort_order>57</sort_order>
+                        <action>adminhtml/Aadmin/Aadmin</action>
+                    </Aadmin>
+                    <Aadmin1 module="Inchoo_HelloDeveloper">
+                        <title>Aadminmodel</title>
+                        <sort_order>58</sort_order>
+                        <action>adminhtml/Aadmin/aamodel</action>
+                    </Aadmin1>
+
+                </children>
+            </Inchoo_HelloDeveloper>
+            <Ctest_menu module="Inchoo_HelloDeveloper">
+                <title>Ctest</title>
+                <sort_order>1001</sort_order>
+                <children>
+                    <Ctest1 module="Inchoo_HelloDeveloper">
+                        <title>Ctestmenu1</title>
+                        <sort_order>1</sort_order>
+                        <action>adminhtml/Ctestfront/Ctestfront1</action>
+                    </Ctest1>
+                </children>
+            </Ctest_menu>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <Inchoo_HelloDeveloper>
+                                            <title>Inchoo_HelloDeveloper Configuration</title>
+                                        </Inchoo_HelloDeveloper>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                       <Inchoo_HelloDeveloper module="Inchoo_HelloDeveloper">
+                <title>My Menu</title>
+                <sort_order>1000</sort_order>
+                <children>
+                   <Inchoo_HelloDeveloper1 module="Inchoo_HelloDeveloper">
+                        <title>test1</title>
+                        <sort_order>0</sort_order>
+                        <action>adminhtml/index/raj</action>
+                    </Inchoo_HelloDeveloper1>
+                     <Inchoo_HelloDeveloper2 module="Inchoo_HelloDeveloper">
+                        <title>test2</title>
+                        <sort_order>1</sort_order>
+                        <action>adminhtml/index/index</action>
+                    </Inchoo_HelloDeveloper2>
+                </children>
+            </Inchoo_HelloDeveloper>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <Inchoo_HelloDeveloper>
+                    <file>mylayout/hellodeveloper.xml</file>
+                </Inchoo_HelloDeveloper>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>
