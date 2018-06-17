@@ -26,7 +26,7 @@
             </student>
             <student_resource>
                 <class>Inchoo_HelloDeveloper_Model_Resource</class>
-                <entities><!-- entity should not contain _ !~ etc -->
+                <entities><!-- entity should ==== not contain _ !~ etc -->
                     <student>
                         <table>student</table>
                     </student>
